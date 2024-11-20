@@ -1,0 +1,22 @@
+<div>
+    <h2>Lista de Contratos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Identificador</th>
+          <th>Nombre Contratante</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contrato of contratos">
+          <td>{{ contrato.identificador }}</td>
+          <td>{{ contrato.nombreContratante }}</td>
+          <td>
+            <button (click)="deleteContrato(contrato.id!)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
